@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     loader: rootLoader,
     action: rootAction,
+    basename: '/react-router',
     children: [
       {
         errorElement: <ErrorPage />,
