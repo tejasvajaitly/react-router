@@ -12,6 +12,7 @@ import Index from "./routes/index";
 import Contact, {loader as contactLoader, action as contactAction,} from "./routes/contact";
 import EditContact, {action as editAction} from "./routes/edit";
 import {action as destroyAction} from "./routes/destroy";
+import NoMatch from './routes/noMatch';
 import './index.css'
 
 const router = createBrowserRouter(
@@ -42,6 +43,7 @@ const router = createBrowserRouter(
           action={destroyAction}
         />
       </Route>
+      <Route path="*" element={<NoMatch />} />
     </Route>
   ),
   { basename: '/react-router' },
